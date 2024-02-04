@@ -1,0 +1,24 @@
+{
+  "name": "expense-tracer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server": "npm run watch --prefix server",
+    "clients": "npm start --prefix clients",
+    "watch": "npm run server &  npm run clients"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express-async-handler": "^1.2.0",
+    "helmet": "^7.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.10.0",
+    "nodemon": "^3.0.3",
+    "react-router-dom": "^6.21.3",
+    "validator": "^13.11.0",
+    "yarn": "^1.22.21"
+  }
+}
