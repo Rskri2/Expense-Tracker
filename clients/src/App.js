@@ -4,6 +4,7 @@ import UserPage from "./components/userPage/UserPage";
 import Register from './components/Register/Register';
 import Login  from "./components/Login/Login";
 import HomePage from "./components/HomePage/HomePage";
+import ProtectedRoute from "./ProtectedRoute";
  function App() {
 return (
  <BrowserRouter>
@@ -11,7 +12,7 @@ return (
       <Route exact path='/'element={<HomePage/>}></Route>
       <Route exact path='/login'element={<Login/>}></Route>
       <Route exact path='/register'element={<Register/>}></Route>
-      <Route exact path='/my-account'element={<UserPage/>}></Route> 
+      <Route exact path='/my-account'element={<ProtectedRoute><UserPage/></ProtectedRoute>}></Route> 
       <Route path='*'  element={<HomePage/>}></Route>
    </Routes>
 </BrowserRouter>

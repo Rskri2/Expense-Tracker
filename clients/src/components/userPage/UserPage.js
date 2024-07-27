@@ -1,4 +1,4 @@
-import React, { useMemo,useState} from "react";
+import React, { useMemo,useState, useEffect} from "react";
 import styled from "styled-components";
  import Orb from "../../components/Orb/Orb";
  import Navigation from "../../components/Navigation/Navigation";
@@ -8,6 +8,7 @@ import styled from "styled-components";
 import { MainLayout } from "../../styles/Layouts";
 
 export default function UserPage() {
+ 
     const orbMemo = useMemo(() => {
         return <Orb />
       },[])
@@ -28,8 +29,7 @@ export default function UserPage() {
         }
       }
   return (
-   
-        <AppStyled className="App">
+       <AppStyled className="App">
         {orbMemo}
         <MainLayout>
              <Navigation active = {active} setActive={setActive}/>

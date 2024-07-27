@@ -1,7 +1,7 @@
 {
   "name": "expense-tracer",
   "version": "1.0.0",
-  "description": "",
+  "description": "The Expense Tracker App is a full-stack application designed to help users track their expenses and manage their budget effectively. It is built using React for the front-end and Node.js for the back-end, providing a seamless user experience and a robust server-side application.",
   "main": "index.js",
   "scripts": {
     "server": "npm run watch --prefix server",
