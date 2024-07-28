@@ -28,6 +28,8 @@ export const GlobalProvider = ({ children }) => {
       let name =res.data.data.user.firstname + " " + res.data.data.user.lastname;
       setUsername(name);
       setLoggedIn('Logged in successfully');
+      window.localStorage.setItem('authenticated', 'true'); 
+
     } catch (err) {
       setLoggedIn(err.response.data.message);
     }
@@ -53,6 +55,8 @@ export const GlobalProvider = ({ children }) => {
         withCredentials: true,
       });
       setLoggedOut('logged out sucessfully')
+      window.localStorage.removeItem("authenticated") 
+
     } catch (err) {
       setLoggedOut(err.response.data.message);
     }
@@ -74,6 +78,8 @@ export const GlobalProvider = ({ children }) => {
       );
 
       setRegistered('Registered Sucessfully!!')
+      window.localStorage.setItem('authenticated', 'true'); 
+
     } catch (err) {
       setRegistered(err.response.data.message)
     }

@@ -6,13 +6,23 @@ import Login  from "./components/Login/Login";
 import HomePage from "./components/HomePage/HomePage";
 import ProtectedRoute from "./ProtectedRoute";
  function App() {
+   const isLoggedIn = window.localStorage.getItem('authenticated');
 return (
  <BrowserRouter>
    <Routes>
-      <Route exact path='/'element={<HomePage/>}></Route>
-      <Route exact path='/login'element={<Login/>}></Route>
-      <Route exact path='/register'element={<Register/>}></Route>
-      <Route exact path='/my-account'element={<ProtectedRoute><UserPage/></ProtectedRoute>}></Route> 
+      <Route  path='/'element={<HomePage/>}></Route>
+      {
+         !isLoggedIn && (
+            <>
+            <Route  path='/login'element={<Login/>}></Route>
+            <Route  path='/register'element={<Register/>}></Route>
+            </>
+
+         )
+      }
+      <Route element={<ProtectedRoute/>}>
+      <Route  path='/my-account'element={<UserPage/>}></Route> 
+      </Route>
       <Route path='*'  element={<HomePage/>}></Route>
    </Routes>
 </BrowserRouter>
