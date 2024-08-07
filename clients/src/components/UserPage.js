@@ -1,11 +1,11 @@
 import React, { useMemo, useState } from "react";
 import styled from "styled-components";
-import Orb from "../../components/Orb/Orb";
-import Navigation from "../../components/Navigation/Navigation";
-import Dashboard from "../../components/Dashboard/Dashboard";
-import Incomes from "../../components/Incomes/Incomes";
-import Expenses from "../Expenses";
-import { MainLayout } from "../../styles/Layouts";
+import Orb from "./Orb";
+import Navigation from "./Navigation";
+import Dashboard from "./Dashboard";
+import Incomes from "./Incomes";
+import Expenses from "./Expenses";
+import { MainLayout } from "../styles/Layouts";
 
 export default function UserPage() {
   const orbMemo = useMemo(() => {

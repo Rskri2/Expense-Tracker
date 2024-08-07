@@ -37,15 +37,6 @@ The Expense Tracker App is a full-stack application designed to help users track
    npm install
    
 2.Create a .env file in the backend directory.
-   Add the following variables:
-   ```
-   PORT=5000
-   NODE_ENV=production
-   DATABASE=your_mongodb_connection_string
-   DATABASE_PASSWORD=your_mongodb_connection_string_password
-   JWT_SECRET=your_jwt_secret
-   JWT_COOKIE_EXPIRES_IN=10
-   ```
 
 ## Usage
 
@@ -58,6 +49,9 @@ The Expense Tracker App is a full-stack application designed to help users track
 - Use your credentials to log in.
 
 ### Track Expenses
+
+- Add and manage your expenses from the dashboard.
+### Track Incomes
 
 - Add and manage your expenses from the dashboard.
 
