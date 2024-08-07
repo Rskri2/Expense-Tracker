@@ -29,7 +29,6 @@ const dbConnect = async() => {
     console.log("db connected")
   } catch(err){
     console.log(err.message);
-    process.exit(1);
     }
   }
 dbConnect();
