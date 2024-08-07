@@ -4,13 +4,6 @@ const incomeController = require('../controllers/incomeCtrl');
 const userController = require('../controllers/usersCtrl');
 
 router
-  .route('/')
-  .get(
-    userController.protect,
-    userController.restrictTo,
-    incomeController.getAllIncome
-  );
-router
   .route('/my-incomes')
   .get(userController.protect, incomeController.getIncome)
   .post(userController.protect, incomeController.createIncCtrl);

@@ -4,13 +4,6 @@ const expensesController = require('../controllers/expensesCtrl');
 const userController = require('../controllers/usersCtrl');
 
 router
-  .route('/')
-  .get(
-    userController.protect,
-    userController.restrictTo,
-    expensesController.getAllExpenses
-  );
-router
   .route('/my-expenses')
   .get(userController.protect, expensesController.getExpenses)
   .post(userController.protect, expensesController.createExpCtrl);

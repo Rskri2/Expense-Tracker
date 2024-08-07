@@ -2,13 +2,7 @@ const express = require('express');
 const router = express.Router();
 const userController = require('../controllers/usersCtrl');
 
-router
-  .route('/')
-  .get(
-    userController.protect,
-    userController.restrictTo,
-    userController.fetchUser
-  );
+
 router.route('/login').post(userController.loginUser);
 router.route('/logout').get(userController.protect, userController.logout);
 router.route('/register').post(userController.registerUser);
