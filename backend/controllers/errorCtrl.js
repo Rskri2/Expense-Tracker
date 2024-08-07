@@ -29,7 +29,6 @@ const handleValidationErrorDB = err => {
   }
   
   const sendErrorProd = (err, req, res) => {
-    
     if (err.isOperational) {
       return res.status(err.statusCode).json({
         title: 'Something went wrong!',

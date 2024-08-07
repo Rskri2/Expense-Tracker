@@ -5,10 +5,8 @@ const cors = require('cors');
 const cookieParser = require('cookie-parser');
 const userRouter = require(`${__dirname}/routes/usersRoutes`); 
 const incomeRouter = require(`${__dirname}/routes/incomeRoutes`); 
-const expensesRouter = require(`${__dirname}/routes/expensesRoutes`); 
-const appRouter = require(`${__dirname}/routes/appRoutes`); 
+const expensesRouter = require(`${__dirname}/routes/expensesRoutes`);
 const errorControllers = require(`${__dirname}/controllers/errorCtrl`);
-
 
 const app = express();
 
@@ -35,7 +33,6 @@ const dbConnect = async() => {
   }
 dbConnect();
 
-app.use('/', appRouter);
 app.use('/api/v1/users', userRouter);
 app.use('/api/v1/income', incomeRouter);
 app.use('/api/v1/expenses', expensesRouter);
@@ -44,5 +41,5 @@ app.use('*', (req, res, next) => {
   next(new AppError(`${req.originalUrl} not found on this site`, 404));
 });
 
-app.use(errorControllers);
+app.use(errorControllers)
 module.exports = app;
