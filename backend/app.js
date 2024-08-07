@@ -25,10 +25,11 @@ const DB =process.env.DATABASE.replace('<password>',process.env.DATABASE_PASSWOR
 
 const dbConnect = async() => {
   try{
-    await mongoose.connect(DB)
+   const con = await mongoose.connect(DB)
     console.log("db connected")
   } catch(err){
-    console.log(err);
+    console.log(err.message);
+    process.exit(1);
     }
   }
 dbConnect();
