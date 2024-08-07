@@ -1,7 +1,5 @@
 const jwt = require('jsonwebtoken');
 const { promisify } = require('util');
-const dotenv = require("dotenv");
-dotenv.config({ path: "./config.env" });
 const User = require('../model/User');
 const catchAsync = require('../utils/catchAsync');
 const AppError = require('../utils/AppError');

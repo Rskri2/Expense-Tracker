@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const mongoosepaginate = require('mongoose-paginate-v2')
 const User = require('./User');
 
-const incomeSchema = mongoose.Schema({
+const incomeSchema = new mongoose.Schema({
     title:{
         type: String,
         required:[true,' Title is required']
