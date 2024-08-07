@@ -3,14 +3,13 @@ const express = require('express');
 const path = require('path');
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
-const userRouter = require('./routes/usersRoutes');
-const incomeRouter = require('./routes/incomeRoutes');
-const expensesRouter = require('./routes/expensesRoutes');
-const appRouter = require('./routes/appRoutes');
+const userRouter = require(`${__dirname}/routes/usersRoutes`); 
+const incomeRouter = require(`${__dirname}/routes/incomeRoutes`); 
+const expensesRouter = require(`${__dirname}/routes/expensesRoutes`); 
+const appRouter = require(`${__dirname}/routes/appRoutes`); 
+const errorControllers = require(`${__dirname}/controllers/errorCtrl`);
 
 
-const AppError = require('./utils/AppError');
-const errorControllers = require('./controllers/errorCtrl');
 const app = express();
 
 app.use(
