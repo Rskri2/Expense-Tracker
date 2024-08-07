@@ -7,7 +7,7 @@ const userRouter = require(`${__dirname}/routes/usersRoutes`);
 const incomeRouter = require(`${__dirname}/routes/incomeRoutes`); 
 const expensesRouter = require(`${__dirname}/routes/expensesRoutes`);
 const errorControllers = require(`${__dirname}/controllers/errorCtrl`);
-
+const AppError = require(`${__dirname}/utils/AppError`);
 const app = express();
 
 app.use(
