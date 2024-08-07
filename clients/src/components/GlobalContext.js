@@ -1,6 +1,7 @@
 import React, {  useContext } from "react";
 import axios from "axios";
 const BASEURL = "https://expense-tracker-k4z7.vercel.app/api/v1";
+
 const GlobalContext = React.createContext();
 
 export const GlobalProvider = ({ children }) => {
