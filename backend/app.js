@@ -38,7 +38,6 @@ const dbConnect = async() => {
   }
 dbConnect();
 
-module.exports = dbConnect;
 app.use('/', appRouter);
 app.use('/api/v1/users', userRouter);
 app.use('/api/v1/income', incomeRouter);
