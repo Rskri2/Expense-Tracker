@@ -19,12 +19,9 @@ app.use(
   })
 );
 
-app.set('view engine', 'pug');
 app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(express.static(path.join(__dirname, 'public')));
-app.set('views', 'pug');
 
 const DB =process.env.DATABASE.replace('<password>',process.env.DATABASE_PASSWORD);
 
